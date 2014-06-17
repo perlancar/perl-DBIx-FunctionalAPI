@@ -45,6 +45,7 @@ my %table_arg = (
         summary => 'Table name',
         schema  => 'str*',
         req => 1,
+        pos => 0,
     },
 );
 
