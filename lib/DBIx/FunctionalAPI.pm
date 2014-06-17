@@ -3,6 +3,7 @@ package DBIx::FunctionalAPI;
 use 5.010001;
 use strict;
 use warnings;
+#use Log::Any '$log';
 
 # VERSION
 # DATE
@@ -116,8 +117,8 @@ sub list_rows {
     my $detail = $args{detail};
 
     my @rows;
-    my $sth = $dbh->prepare(qq[SELECT * FROM "$table"]);
-    $sth->execute;
+    my $sth = $dbh->prepare("SELECT * FROM ?");
+    $sth->execute($table);
     while (my $row = $sth->fetchrow_hashref) {
         if ($detail) {
             push @rows, $row;
