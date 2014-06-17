@@ -117,8 +117,9 @@ sub list_rows {
     my $detail = $args{detail};
 
     my @rows;
-    my $sth = $dbh->prepare("SELECT * FROM ?");
-    $sth->execute($table);
+    # can't use placeholder here for table name
+    my $sth = $dbh->prepare("SELECT * FROM ".$dbh->quote_identifier($table));
+    $sth->execute();
     while (my $row = $sth->fetchrow_hashref) {
         if ($detail) {
             push @rows, $row;
