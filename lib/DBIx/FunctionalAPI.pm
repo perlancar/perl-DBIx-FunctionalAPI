@@ -3,10 +3,14 @@ package DBIx::FunctionalAPI;
 use 5.010001;
 use strict;
 use warnings;
-#use Log::Any '$log';
+use experimental 'smartmatch';
+use Log::Any '$log';
 
 # VERSION
 # DATE
+
+use List::MoreUtils qw(uniq);
+use SHARYANTO::Complete::Util qw(complete_array);
 
 require Exporter;
 our @ISA       = qw(Exporter);
@@ -47,6 +51,31 @@ my %table_arg = (
         schema  => 'str*',
         req => 1,
         pos => 0,
+        completion => sub {
+            my %args = @_;
+            $log->errorf("TMP:%s", \%args);
+            my $word = $args{word} // "";
+            my $res = list_tables(dbh=>$args{args}{dbh});
+            return [] if $res->[0] != 200;
+
+            my $tables = $res->[2];
+
+            # dequote; this is currently ad-hoc for ansi & mysql
+            for (@$tables) {
+                s/[`"]+//g;
+            }
+            # provide non-qualified table names for convenience
+            my @nonq;
+            for my $t (@$tables) {
+                $t =~ s/.+\.//;
+                push @nonq, $t unless $t ~~ @nonq;
+            }
+            push @$tables, @nonq;
+
+            $tables = [uniq @$tables];
+
+            complete_array(word=>$word, array=>$tables);
+        },
     },
 );
 
