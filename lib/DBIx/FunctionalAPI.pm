@@ -10,7 +10,7 @@ use Log::Any '$log';
 # DATE
 
 use List::MoreUtils qw(uniq);
-use SHARYANTO::Complete::Util qw(complete_array);
+use Complete::Util qw(complete_array);
 
 require Exporter;
 our @ISA       = qw(Exporter);
