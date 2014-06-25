@@ -53,7 +53,6 @@ my %table_arg = (
         pos => 0,
         completion => sub {
             my %args = @_;
-            $log->errorf("TMP:%s", \%args);
             my $word = $args{word} // "";
             my $res = list_tables(dbh=>$args{args}{dbh});
             return [] if $res->[0] != 200;
