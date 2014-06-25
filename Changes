@@ -1,5 +1,12 @@
 Revision history for DBIx-FunctionalAPI
 
+0.04    2014-06-25 (SHARYANTO)
+
+        - No functional changes.
+
+        - Rebuild.
+
+
 0.03    2014-06-25 (SHARYANTO)
 
         - Add completion for table name.
