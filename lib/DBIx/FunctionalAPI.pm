@@ -10,7 +10,7 @@ use Log::Any '$log';
 # DATE
 
 use List::MoreUtils qw(uniq);
-use Complete::Util qw(complete_array);
+use Complete::Util qw(complete_array_elem);
 
 require Exporter;
 our @ISA       = qw(Exporter);
@@ -73,7 +73,7 @@ my %table_arg = (
 
             $tables = [uniq @$tables];
 
-            complete_array(word=>$word, array=>$tables);
+            complete_array_elem(word=>$word, array=>$tables);
         },
     },
 );
