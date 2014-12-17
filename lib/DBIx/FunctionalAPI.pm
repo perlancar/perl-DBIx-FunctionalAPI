@@ -1,13 +1,13 @@
 package DBIx::FunctionalAPI;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use strict;
 use warnings;
 use experimental 'smartmatch';
 use Log::Any '$log';
-
-# VERSION
-# DATE
 
 use List::MoreUtils qw(uniq);
 use Complete::Util qw(complete_array_elem);
@@ -29,6 +29,11 @@ our @EXPORT_OK = qw(
 
 our $dbh;
 our %SPEC;
+
+$SPEC{':package'} = {
+    v => 1.1,
+    summary => 'Some functions to expose your database as an API',
+};
 
 my %common_args = (
     dbh => {
@@ -160,7 +165,7 @@ sub list_rows {
 }
 
 1;
-#ABSTRACT: Some functions to expose your database as an API
+#ABSTRACT:
 
 =for Pod::Coverage ^()$
 
