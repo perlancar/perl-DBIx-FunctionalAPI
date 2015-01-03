@@ -19,13 +19,6 @@ our @EXPORT_OK = qw(
                        list_columns
                        list_rows
                );
-# TODO: delete_row, delete_rows
-# TODO: delete_table, delete_tables
-# TODO: create_row, create_table
-# TODO: modify_row, modify_table
-# TODO: rename_column, rename_table
-# TODO: get_table_schema
-# TODO: get_db_schema
 
 our $dbh;
 our %SPEC;
@@ -182,11 +175,6 @@ client/server (like HTTP) API.
 
 Every function accepts C<dbh> argument, but for convenience database handle can
 also be set via the C<$dbh> package variable.
-
-
-=head1 TODO
-
-Option to select specific catalog and schema (table namespace).
 
 
 =head1 SEE ALSO
