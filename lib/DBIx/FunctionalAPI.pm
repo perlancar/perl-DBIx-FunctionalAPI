@@ -7,7 +7,7 @@ use 5.010001;
 use strict;
 use warnings;
 use experimental 'smartmatch';
-use Log::Any::IfLOG '$log';
+use Log::ger;
 
 use List::MoreUtils qw(uniq);
 use Complete::Util qw(complete_array_elem);
