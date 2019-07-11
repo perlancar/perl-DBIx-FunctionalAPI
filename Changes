@@ -1,11 +1,11 @@
-0.09    2017-07-10 (PERLANCAR)
+0.09    2017-07-10  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Replace Log::Any with Log::ger.
 
 
-0.08    2015-09-03 (PERLANCAR)
+0.08    2015-09-03  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -14,46 +14,46 @@
 	  requirement.
 
 
-0.07    2015-08-17 (PERLANCAR)
+0.07    2015-08-17  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Switch from Log::Any to Log::Any::IfLOG.
 
 
-0.06    2015-01-03 (PERLANCAR)
+0.06    2015-01-03  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Rebuild (Generate TODO.md).
 
 
-0.05    2014-07-02 (SHARYANTO)
+0.05    2014-07-02  Released-By: SHARYANTO
 
         - No functional changes.
 
         - Adjust to Complete::Util 0.12.
 
 
-0.04    2014-06-25 (SHARYANTO)
+0.04    2014-06-25  Released-By: SHARYANTO
 
         - No functional changes.
 
         - Rebuild.
 
 
-0.03    2014-06-25 (SHARYANTO)
+0.03    2014-06-25  Released-By: SHARYANTO
 
         - Add completion for table name.
 
 
-0.02    2014-06-17 (SHARYANTO)
+0.02    2014-06-17  Released-By: SHARYANTO
 
         - No functional change.
 
         - Some fixes.
 
 
-0.01    2014-06-15 (SHARYANTO)
+0.01    2014-06-15  Released-By: SHARYANTO
 
         - First release.
